@@ -1,0 +1,32 @@
+import { useState } from 'react'
+
+
+import Child1 from './Child1'
+import Child2 from './Child2';
+
+
+function App() {
+  const [first , setFirst] = useState(0);
+  const [second ,setsecond] = useState(0);
+  const handlefirst = (val)=>{
+    setFirst(val)
+  }
+  const handlesec = (val)=>{
+    setsecond(val)
+  }
+  return (
+    <>
+     <Child1
+      handlefirst = {handlefirst}
+      handlesec = {handlesec}
+     />
+     <Child2
+      first = {first}
+      second = {second}
+     />
+     </>
+    
+  )
+}
+
+export default App
