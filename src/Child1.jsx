@@ -7,19 +7,23 @@ const Child1 = ({ handleFirst, handleSecond }) => {
   const handleChild1First = (val) => {
     handleFirst(val);
   };
+  
   const handleChild1Second = (val) => {
     handleSecond(val);
   };
+
   const handleChange1 = (e) => {
     let val = parseInt(e.target.value, 10);
     setFirst(val);
     handleChild1First(val);
   };
+
   const handleChange2 = (e) => {
     let val = parseInt(e.target.value, 10);
     setSecond(val);
     handleChild1Second(val);
   };
+
   return (
     <>
       <div>
