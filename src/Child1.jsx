@@ -1,27 +1,27 @@
 import React , {useState} from 'react'
 
-const Child1 = (handlefirst , handlesec) => {
+const Child1 = ({handlefirst , handlesec}) => {
     const [first, setFirst] = useState(0)
   const [second, setSecond] = useState(0)
 //   const [sum , setSum] = useState(0)
   
-  const handlefirst1 = ()=>{
-    handlefirst(first)
+  const handlefirst1 = (val)=>{
+    handlefirst(val)
   }
-  const handlesec2 = ()=>{
-    handlesec(second)
+  const handlesec2 = (val)=>{
+    handlesec(val)
   }
   const handleChange1 = (e)=>{
       let val = parseInt(e.target.value , 10)
       setFirst(val)
-      handlefirst1();
+      handlefirst1(val);
       
       
   }
   const handleChange2 = (e)=>{
     let val = parseInt(e.target.value , 10)
     setSecond(val)
-    handlesec2()
+    handlesec2(val)
     
   }
   return (
