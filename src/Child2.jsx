@@ -1,38 +1,38 @@
 import React, { useState } from 'react';
 
 const Child2 = ({ first, second }) => {
-  const [fir, setfir] = useState(0);
-  const [snd, setsnd] = useState(0);
-  const [sm, setsm] = useState(0);
-console.log(first , second)
-  const handlefir = (e) => {
+  const [var1, setVar1] = useState(0);
+  const [var2, setVar2] = useState(0);
+  const [var3, setVar3] = useState(0);
+
+  const handlevar1 = (e) => {
     let val = parseInt(e.target.value, 10);
-    setfir(val);
+    setVar1(val);
   };
 
-  const handlesnd = (e) => {
+  const handlevar2= (e) => {
     let val = parseInt(e.target.value, 10);
-    setsnd(val);
+    setVar2(val);
   };
 
-  const handlesm = (e) => {
+  const handlevar3 = (e) => {
     let val = parseInt(e.target.value, 10);
-    setsm(val);
+    setVar3(val);
   };
 
   return (
     <>
       <div>
         <span>{first}+</span>
-        <input type='number' value={fir} onChange={handlefir} /> = <span>{fir + first}</span>
+        <input type='number' value={var1} onChange={handlevar1} /> = <span>{var1 + first}</span>
       </div>
       <div>
         <span>{second}+</span>
-        <input type='number' value={snd} onChange={handlesnd} /> = <span>{snd + second}</span>
+        <input type='number' value={var2} onChange={handlevar2} /> = <span>{var2+ second}</span>
       </div>
       <div>
         <span>{first + second}+</span>
-        <input type='number' value={sm} onChange={handlesm} /> = <span>{first + second + sm}</span>
+        <input type='number' value={var3} onChange={handlevar3} /> = <span>{first + second + var3}</span>
       </div>
     </>
   );
